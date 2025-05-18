@@ -48,41 +48,6 @@ python app.py
 http://localhost:5000
 ```
 
-## Deployment Guide 🌐
-
-### Deploying to Render
-
-1. Create a Render account at [render.com](https://render.com)
-
-2. Create a new Web Service:
-   - Connect your GitHub repository
-   - Select the Python runtime
-   - Set the build command:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   - Set the start command:
-     ```bash
-     gunicorn app:app
-     ```
-
-3. Add Environment Variables:
-   - Add your ExchangeRate-API key:
-     - Key: `EXCHANGE_RATE_API_KEY`
-     - Value: Your API key from ExchangeRate-API
-
-4. Deploy:
-   - Click "Create Web Service"
-   - Render will automatically build and deploy your application
-
-Your application will be available at: `https://your-app-name.onrender.com`
-
-### Alternative Deployment Options
-
-- **Railway**: Similar setup to Render, with GitHub integration
-- **Heroku**: More robust but paid option
-- **AWS Elastic Beanstalk**: Good for scaling but more complex setup
-
 ## Usage Guide 📖
 
 1. Select the car's transmission type (Manual/Automatic)
