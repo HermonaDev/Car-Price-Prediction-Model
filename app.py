@@ -12,7 +12,7 @@ app = Flask(__name__)
 def get_usd_to_etb_rate():
     try:
         # Using exchangerate-api.com for real-time rates
-        response = requests.get('https://v6.exchangerate-api.com/v6/1a0cec85dba024b67760288b/latest/USD')
+        response = requests.get('https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD')
         if response.status_code == 200:
             data = response.json()
             return data['conversion_rates']['ETB']
