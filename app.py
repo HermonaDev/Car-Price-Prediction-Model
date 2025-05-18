@@ -5,14 +5,16 @@ import joblib
 from sklearn.ensemble import RandomForestRegressor
 import requests
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
 # Function to get current USD to ETB exchange rate
 def get_usd_to_etb_rate():
     try:
-        # Using exchangerate-api.com for real-time rates
-        response = requests.get('https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD')
+        # Get API key from environment variable or use the hardcoded one as fallback
+        api_key = os.environ.get('EXCHANGE_RATE_API_KEY', '1a0cec85dba024b67760288b')
+        response = requests.get(f'https://v6.exchangerate-api.com/v6/{api_key}/latest/USD')
         if response.status_code == 200:
             data = response.json()
             return data['conversion_rates']['ETB']
