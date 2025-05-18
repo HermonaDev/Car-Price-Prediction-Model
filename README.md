@@ -1,42 +1,96 @@
-# Car Price Prediction Model
+# AutoPricer - Smart Car Valuation System 🚗
 
-This repository contains a machine learning model for car price detection. The model utilizes various machine learning techniques to accurately predict the price of a car based on its features.
+AutoPricer is a modern web application that predicts used car prices using machine learning. Built with Python and Flask, it provides accurate price estimations in both USD and Ethiopian Birr (ETB) with real-time currency conversion.
 
-## Features
+![AutoPricer Interface](static/autopricer-preview.png)
 
-- Input: Various features such as make, model, year, mileage, fuel type, and more.
-- Output: Predicted price of the car.
+## Features ✨
 
-## Dataset
+- **Smart Price Prediction**: Uses Random Forest algorithm trained on extensive car data
+- **Dual Currency Support**: Shows prices in USD and ETB with real-time exchange rates
+- **User-Friendly Interface**: Modern, responsive design with intuitive controls
+- **Interactive Elements**: Animated components and smooth transitions
+- **Organized Year Selection**: Grouped year ranges for easier navigation
+- **Real-Time Updates**: Timestamp for each prediction with current exchange rates
 
-The model is trained on a comprehensive dataset of car listings, including information on car specifications and corresponding prices. The dataset is carefully curated and preprocessed to ensure accurate training and evaluation.
+## Technology Stack 🛠️
 
-## Machine Learning Techniques
+- **Backend**: Python, Flask
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Machine Learning**: scikit-learn (Random Forest Regressor)
+- **Data Processing**: pandas, numpy
+- **Exchange Rates**: ExchangeRate-API integration
 
-The following machine learning techniques are employed in the model:
+## Setup and Installation 🚀
 
-- Feature Engineering: Extracting relevant features from the dataset and transforming them into a suitable format for training.
-- Regression Algorithms: Utilizing advanced regression algorithms, such as linear regression, decision tree regression, and random forest regression, to predict car prices.
-- Model Evaluation: Employing various evaluation metrics, including mean squared error (MSE) and R-squared, to assess the performance and accuracy of the model.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/Car-Price-Prediction-Model.git
+cd Car-Price-Prediction-Model
+```
 
-## Usage
+2. Install required packages:
+```bash
+pip install -r requirements.txt
+```
 
-To use the car price detection model, follow these steps:
+3. Set up your ExchangeRate-API key:
+- Sign up at [ExchangeRate-API](https://www.exchangerate-api.com/)
+- Replace `YOUR_API_KEY` in `app.py` with your actual API key
 
-1. Clone the repository: `git clone https://github.com/your-username/car-price-prediction-model.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Prepare your dataset: Ensure that your dataset is in the appropriate format, with the necessary features for predicting car prices.
-4. Train the model: Run the training script, providing the path to your dataset.
-5. Evaluate the model: Assess the model's performance using the provided evaluation metrics.
-6. Predict car prices: Utilize the trained model to predict prices for new car listings.
+4. Run the application:
+```bash
+python app.py
+```
 
-## Contributing
+5. Open your browser and navigate to:
+```
+http://localhost:5000
+```
 
-Contributions to this project are welcome! If you have any suggestions, bug fixes, or additional features to propose, please open an issue or submit a pull request.
+## Usage Guide 📖
 
+1. Select the car's transmission type (Manual/Automatic)
+2. Choose the fuel type (Petrol/Diesel/Other)
+3. Enter the kilometers driven
+4. Select the manufacturing year from the grouped dropdown
+5. Choose the owner type
+6. Click "Calculate Price" to get the prediction
 
-## Contact
+The result will show:
+- Estimated price in USD
+- Equivalent amount in ETB (using current exchange rate)
+- Timestamp of the prediction
 
-For any inquiries or further information, please contact hermonaaddisu@gmail.com
+## Model Information 🤖
 
-Happy car price prediction using machine learning!
+The prediction model:
+- Uses Random Forest Regression
+- Trained on car-dataset.csv
+- Features include:
+  - Transmission type
+  - Fuel type
+  - Kilometers driven
+  - Manufacturing year
+  - Owner history
+
+## Contributing 🤝
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License 📄
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments 👏
+
+- Dataset source: car-dataset.csv
+- Exchange rates provided by ExchangeRate-API
+- UI components inspired by modern design practices
+
+## Support 💬
+
+For support, please open an issue in the GitHub repository or contact the maintainers.
+
+---
+Made with ❤️ in Ethiopia
