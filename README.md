@@ -73,6 +73,8 @@ The prediction model:
   - Kilometers driven
   - Manufacturing year
   - Owner history
+ 
+Planned improvements include code modularization, model comparison, CI/CD pipelines, and MLOps integration.
 
 ## Contributing 🤝
 
